@@ -5,7 +5,7 @@ import { Input } from '@/components/ui/input';
 import { Textarea } from '@/components/ui/textarea';
 import { Label } from '@/components/ui/label';
 import Icon from '@/components/ui/icon';
-import { useToast } from '@/hooks/use-toast';
+import { toast } from 'sonner';
 
 const Index = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -14,12 +14,10 @@ const Index = () => {
     phone: '',
     message: ''
   });
-  const { toast } = useToast();
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-    toast({
-      title: "Заявка отправлена!",
+    toast.success("Заявка отправлена!", {
       description: "Мы свяжемся с вами в ближайшее время.",
     });
     setFormData({ name: '', phone: '', message: '' });
