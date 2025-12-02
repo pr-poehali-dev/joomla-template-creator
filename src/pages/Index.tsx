@@ -89,13 +89,13 @@ const Index = () => {
         )}
       </header>
 
-      <aside className="hidden lg:block fixed right-8 top-1/2 -translate-y-1/2 z-40">
-        <nav className="bg-white shadow-xl rounded-lg p-2">
+      <aside className="hidden lg:block fixed right-6 top-1/2 -translate-y-1/2 z-40">
+        <nav className="bg-gradient-to-b from-metallic-dark to-metallic-mid shadow-2xl rounded-xl p-3 border border-white/20">
           {navigation.map((item) => (
             <a
               key={item.name}
               href={item.href}
-              className="block py-3 px-6 text-sm font-medium text-metallic-dark hover:bg-primary hover:text-white rounded-lg transition-all"
+              className="block py-4 px-6 text-sm font-semibold text-white hover:bg-white/20 hover:scale-105 rounded-lg transition-all mb-2 last:mb-0"
             >
               {item.name}
             </a>
